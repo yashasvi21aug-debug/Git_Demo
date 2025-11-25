@@ -1,0 +1,11 @@
+.container {
+  display: flex; /* Turns the parent div into a Flexbox container */
+  gap: 10px;     /* Optional: space between child elements */
+}
+
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  border: 1px solid #333;
+  text-align: center;
+}
