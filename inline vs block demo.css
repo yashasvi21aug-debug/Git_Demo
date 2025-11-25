@@ -1,0 +1,24 @@
+/* Default behavior */
+.block-demo {
+  background: lightblue;
+  display: block;      /* Paragraphs are block by default */
+  margin-bottom: 10px;
+}
+
+.inline-demo {
+  background: lightgreen;
+  display: inline;     /* Spans are inline by default */
+}
+
+/* Experiment: turn inline into block */
+.inline-demo {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+/* Experiment: turn block into inline */
+.block-demo {
+  display: inline;
+  padding: 5px;
+}
