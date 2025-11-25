@@ -1,0 +1,12 @@
+.float-img {
+  float: left;
+  width: 200px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* Stops text from wrapping around the floated element */
+.clear {
+  clear: both;
+}
