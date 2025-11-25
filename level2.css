@@ -1,0 +1,38 @@
+.demo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: center;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  border: 1px dashed #888;
+  padding: 10px;
+  min-height: 80px;
+}
+
+.container.row {
+  flex-direction: row;
+}
+
+.container.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.container.column {
+  flex-direction: column;
+}
+
+.container.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.box {
+  background-color: lightcoral;
+  padding: 20px;
+  border: 1px solid #333;
+  text-align: center;
+}
