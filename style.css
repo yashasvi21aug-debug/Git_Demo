@@ -8,28 +8,94 @@ body {
 }
 
 header {
-  background-color: #333;-
+  background-color: #333;
   color: #fff;
   padding: 15px 0;
+}
+
+header h1 {
   text-align: center;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 20px;
   font-weight: bold;
+  padding: 5px 10px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+/* Skills / Projects Section */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill {
+  flex: 1 1 150px;
+  background-color: #0078ff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .skills {
+    flex-direction: column;
+  }
 }
