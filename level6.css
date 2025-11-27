@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  justify-content: center; /* centers horizontally (main axis) */
+  align-items: center;     /* centers vertically (cross axis) */
+  height: 200px;
+  background: #eee;
+}
