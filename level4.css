@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  height: 200px;
+  background: #eee;
+  border: 1px solid #aaa;
+}
+
+.container.flex-start {
+  align-items: flex-start;
+}
+
+.item {
+  background: #4da3ff;
+  padding: 10px;
+  margin: 5px;
+}
