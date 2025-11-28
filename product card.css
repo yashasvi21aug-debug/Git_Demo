@@ -1,0 +1,61 @@
+#productsite/productstylesheet.css
+        body {
+            background-color: #D9D7B6;
+            text-align: center; }
+
+            .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            }
+        .product1 {
+            width: 200px;
+            height: 390px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #000000;
+            margin: 15px;
+            margin-left: 20px;
+            height:auto;
+            background-color: #FDFBD4; }
+        .product2 {
+            width: 200px;
+            height: 390px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #000000;
+            margin: 15px;
+            margin-left:  20px;
+            height:auto;
+            background-color: #FDFBD4; }
+        .product3 {
+            width: 200px;
+            height: 390px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #000000;
+            margin: 15px;
+            margin-left: 20px;
+            height:auto;
+            background-color: #FDFBD4; }
+        .price {
+            color: #545333;
+            font-weight: bold;
+            margin-bottom: 15px;}
+        .description {
+            font-size: 14px;
+            color: #1f1f1f; }
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            color: #545333;
+            margin-bottom: 20px;}
+        .button {
+            background-color: #545333;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5%;}
+        button:hover {
+            background-color: #6d6d6d;
+            cursor: pointer; }
