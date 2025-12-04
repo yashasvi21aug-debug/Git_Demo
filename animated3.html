@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #eee;
+      font-family: Arial;
+    }
+
+    .traffic-light {
+      width: 80px;
+      background: #222;
+      padding: 15px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .light {
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      border-radius: 50%;
+      background: #555;
+      opacity: 0.3;
+    }
+
+    .red { background: red; }
+    .yellow { background: yellow; }
+    .green { background: green; }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="traffic-light">
+  <div id="red" class="light red"></div>
+  <div id="yellow" class="light yellow"></div>
+  <div id="green" class="light green"></div>
+</div>
+
+<div>
+  <button onclick="turnOn('red')">Red</button>
+  <button onclick="turnOn('yellow')">Yellow</button>
+  <button onclick="turnOn('green')">Green</button>
+</div>
+
+<div>
+  <button onclick="startAuto()">Start Auto</button>
+  <button onclick="stopAuto()">Stop</button>
+</div>
+
+<script>
+  let autoCycle;
+
+  function resetLights() {
+    document.getElementById("red").style.opacity = 0.3;
+    document.getElementById("yellow").style.opacity = 0.3;
+    document.getElementById("green").style.opacity = 0.3;
+  }
+
+  function turnOn(color) {
+    resetLights();
+    document.getElementById(color).style.opacity = 1;
+  }
+
+  function startAuto() {
+    stopAuto();
+    let index = 0;
+    const sequence = ["red", "yellow", "green"];
+
+    autoCycle = setInterval(() => {
+      turnOn(sequence[index]);
+      index = (index + 1) % sequence.length;
+    }, 2000); // 2 seconds each
+  }
+
+  function stopAuto() {
+    clearInterval(autoCycle);
+  }
+</script>
+
+</body>
+</html>
