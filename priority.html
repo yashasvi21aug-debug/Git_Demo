@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Element selector */
+    p {
+      color: blue;
+      font-size: 18px;
+    }
+
+    /* Class selector */
+    .highlight {
+      color: green;
+    }
+
+    /* ID selector (highest priority) */
+    #special {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <p>This is a normal paragraph (blue)</p>
+
+  <p class="highlight">This uses CLASS (green)</p>
+
+  <p id="special" class="highlight">CSS Priority Test</p>
+
+</body>
+</html>
