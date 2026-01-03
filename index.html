@@ -3,33 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1 class="title">Beautiful Nature Gallery</h1>
+<!-- Navbar -->
+<header>
+    <nav class="navbar">
+        <h2 class="logo">MyPortfolio</h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<div class="gallery">
-    <div class="gallery-item">
-        <img src="C:\Users\yasha\Downloads\istockphoto-517188688-612x612.jpg" alt="Image 1">
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <img src="images/profile.png" class="hero-img">
+        <h1>Hi, I'm <span>Yashasvi Singh</span></h1>
+        <p>Web Developer | Designer | Student</p>
+        <a href="#contact" class="btn">Hire Me</a>
     </div>
-    <div class="gallery-item">
-        <img src="C:\Users\yasha\Downloads\istockphoto-465405755-612x612.jpg" alt="Image 2">
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate web developer learning HTML and CSS.
+        I love creating responsive and creative websites.
+    </p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <div class="skill-box">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Flexbox</div>
+        <div class="skill">CSS Grid</div>
     </div>
-    <div class="gallery-item">
-        <img src="C:\Users\yasha\Downloads\landscape-sky-full-moon-seascape-to-night-serenity-nature-beautiful-view-sea-many-stars-attractive-dark-cloud-141554532.webp" alt="Image 3">
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio using HTML & CSS.</p>
+        </div>
+        <div class="project-card">
+            <h3>Product Grid</h3>
+            <p>Responsive product grid layout.</p>
+        </div>
+        <div class="project-card">
+            <h3>Landing Page</h3>
+            <p>Modern landing page design.</p>
+        </div>
     </div>
-    <div class="gallery-item">
-        <img src="C:\Users\yasha\Downloads\istockphoto-505684374-612x612.jpg" alt="Image 4">
-    </div>
-    <div class="gallery-item">
-        <img src="C:\Users\yasha\Downloads\pexels-souvenirpixels-417074.jpg" alt="Image 5">
-    </div>
-    <div class="gallery-item">
-        <img src="C:\Users\yasha\Downloads\52849-473336269_tiny.jpg" alt="Image 6">
-    </div>
-</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 MyPortfolio | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
