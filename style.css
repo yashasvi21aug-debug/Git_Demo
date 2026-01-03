@@ -1,737 +1,671 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Body */
+/* ===== BODY ===== */
 body {
-    font-family: 'Crimson Text', serif;
-    background: radial-gradient(circle at top, #2a1b0f, #0b0704);
-    color: #f5e6c8;
+    background-color: #0d0b14;
+    color: #f5f5f5;
 }
 
-/* Header */
+/* ===== NAVBAR ===== */
 .header {
-    background: linear-gradient(90deg, #2b1a0f, #120b05);
-    border-bottom: 2px solid #d4af37;
+    background: linear-gradient(135deg, #2b1055, #000);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
 }
 
 .navbar {
-    width: 90%;
+    max-width: 1200px;
     margin: auto;
-    padding: 15px 0;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-family: 'Cinzel', serif;
     font-size: 2rem;
-    color: #d4af37;
-    letter-spacing: 2px;
+    color: gold;
+    font-weight: 700;
 }
 
-/* Navbar Links */
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 22px;
+    gap: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #f5e6c8;
-    font-weight: 600;
-    position: relative;
+    color: #f5f5f5;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.nav-links a::after {
-    content: "✦";
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-    opacity: 0;
+.nav-links a:hover,
+.nav-links a.active {
     color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 5px;
 }
 
-.nav-links a:hover::after,
-.nav-links .active::after {
-    opacity: 1;
-}
-
-/* Hero Section (Hogwarts Castle) */
+/* ===== HERO ===== */
 .hero {
     height: 90vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-        url("images/hogwarts.jpg") center/cover no-repeat;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.8)
+    ),
+    url(images/royal.png) center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-/* Hero Text */
 .hero-content h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 3.3rem;
-    color: #d4af37;
+    font-size: 3rem;
+    color: gold;
     margin-bottom: 15px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 30px;
-    color: #e6d6b0;
+    color: #ddd;
 }
 
-/* Buttons */
+/* ===== BUTTONS ===== */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .btn {
-    padding: 12px 28px;
+    padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    background: linear-gradient(135deg, #d4af37, #b8962e);
-    color: #1b1209;
-    box-shadow: 0 0 15px rgba(212,175,55,0.4);
+    font-weight: 600;
     transition: 0.3s;
 }
 
-.btn:hover {
-    box-shadow: 0 0 30px rgba(212,175,55,0.8);
-    transform: translateY(-3px);
+.primary {
+    background: gold;
+    color: #000;
 }
 
-/* Features */
+.primary:hover {
+    background: #d4af37;
+}
+
+.secondary {
+    border: 2px solid gold;
+    color: gold;
+}
+
+.secondary:hover {
+    background: gold;
+    color: #000;
+}
+
+/* ===== FEATURES ===== */
 .features {
-    width: 90%;
-    margin: 70px auto;
+    max-width: 1200px;
+    margin: 80px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    padding: 0 20px;
 }
 
 .feature-card {
-    background: rgba(30, 20, 12, 0.9);
-    border: 1px solid #d4af37;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #1a1333, #000);
     padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(212,175,55,0.15);
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.15);
+    transition: transform 0.3s;
 }
 
 .feature-card:hover {
-    box-shadow: 0 0 35px rgba(212,175,55,0.6);
+    transform: translateY(-10px);
 }
 
 .feature-card h3 {
-    font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: gold;
     margin-bottom: 10px;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
-    background: #120b05;
-    border-top: 2px solid #d4af37;
+    background: #000;
     text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
+    padding: 20px;
+    color: #aaa;
+    border-top: 1px solid gold;
 }
-.candles span {
-    position: fixed;
-    top: 100%;
-    width: 6px;
-    height: 30px;
-    background: #f5f5f5;
-    left: calc(10% * var(--i));
-    animation: floatCandle 12s linear infinite;
-    border-radius: 2px;
-}
-
-.candles span::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -4px;
-    width: 14px;
-    height: 14px;
-    background: gold;
-    border-radius: 50%;
-    box-shadow: 0 0 20px gold;
+/* Fade & slide animation */
+@keyframes royalFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.candles span:nth-child(1){ --i:1 }
-.candles span:nth-child(2){ --i:3 }
-.candles span:nth-child(3){ --i:5 }
-.candles span:nth-child(4){ --i:7 }
-.candles span:nth-child(5){ --i:9 }
-
-@keyframes floatCandle {
-    0% { transform: translateY(0); opacity:0; }
-    20% { opacity:1; }
-    100% { transform: translateY(-120vh); opacity:0; }
+.hero-content,
+.feature-card {
+    animation: royalFade 1.2s ease forwards;
 }
-.owl {
-    position: fixed;
-    top: 20%;
-    left: -50px;
-    font-size: 40px;
-    animation: flyOwl 15s linear infinite;
-}
-
-@keyframes flyOwl {
-    0% { transform: translateX(-100px); }
-    50% { transform: translateX(110vw) translateY(-40px); }
-    100% { transform: translateX(-100px); }
-}
-
-.theme-switch {
-    color: gold;
-    font-size: 0.9rem;
-}
-
-#house {
-    display: none;
-}
-
-/* Default Gryffindor */
+/* ===== GENERAL ===== */
 body {
-    --main: #7f0909;
-    --accent: #d4af37;
+    background-color: #0d0b14;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Slytherin Theme */
-#house:checked ~ * {
-    --main: #0b3d2e;
-    --accent: #9ad1b3;
-}
-
-/* Apply theme */
-.header,
-footer {
-    background: var(--main);
-}
-
-.logo,
-.hero-content h2 {
-    color: var(--accent);
-}
-
-.btn {
-    background: linear-gradient(135deg, var(--accent), #b8962e);
-}
-.sorting-hat {
-    text-align: center;
-    margin: 60px auto;
-    animation: floatHat 4s ease-in-out infinite;
-}
-
-.sorting-hat img {
-    width: 160px;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
-}
-
-.hat-text {
-    margin-top: 10px;
-    font-family: 'Cinzel', serif;
-    color: gold;
-    animation: talk 2s infinite;
-}
-
-/* Floating */
-@keyframes floatHat {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Talking effect */
-@keyframes talk {
-    0%,100% { opacity: 1; }
-    50% { opacity: 0.4; }
+/* ===== NAVBAR ===== */
+header {
+    background: linear-gradient(135deg, #2b1055, #000);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.25);
 }
 .hero {
-    position: relative;
-    overflow: hidden;
-    background: url("images/hogwarts.jpg") center/cover no-repeat;
-    min-height: 90vh;
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.8)
+    ),
+    url(images/royal.png) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-/* Wizard Theme Background */
-.wizard-bg {
-    background: url("images/hogwarts.jpg") center/cover fixed;
-    font-family: 'Crimson Text', serif;
-    color: #f5e6b8;
-}
-
-/* Navbar */
-.wizard-nav {
-    background: rgba(20, 20, 30, 0.9);
-    border-bottom: 2px solid gold;
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    font-family: 'Cinzel', serif;
     color: gold;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-/* Menu Section */
-.magical-menu h2 {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: gold;
-    text-shadow: 0 0 10px #ffd700;
-    margin-bottom: 40px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-/* Menu Cards */
-.spell-card {
-    background: radial-gradient(#f3e5ab, #c2a45e);
-    color: #3b2b1a;
-    border: 3px solid #7a5c2e;
-    box-shadow: 0 0 25px rgba(255,215,0,0.4);
-    transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.spell-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 0 40px rgba(255,215,0,0.8);
-}
-
-/* Buttons */
-.spell-btn {
-    background: linear-gradient(45deg, #7f0909, #d4af37);
-    color: #fff;
-    border-radius: 30px;
+.nav-links a {
     text-decoration: none;
-    font-family: 'Cinzel', serif;
-    box-shadow: 0 0 10px gold;
+    color: #eee;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.spell-btn:hover {
-    background: linear-gradient(45deg, #1a472a, #d4af37);
-    box-shadow: 0 0 20px lime;
-}
-
-/* Footer */
-.wizard-footer {
-    background: rgba(0,0,0,0.85);
+.nav-links a:hover,
+.nav-links a.active {
     color: gold;
-    text-align: center;
-    padding: 20px;
+    border-bottom: 2px solid gold;
+    padding-bottom: 4px;
 }
+
+/* ===== MENU SECTION ===== */
+.menu {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.8rem;
+    color: gold;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* ===== MENU GRID ===== */
 .menu-items {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 40px;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 35px;
 }
 
-/* Card */
-.menu-card {
-    background: radial-gradient(#f3e5ab, #c2a45e);
-    border-radius: 16px;
-    padding: 15px;
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.8)
+    ),
+    url(images/royal.png) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    border: 3px solid #7a5c2e;
-    box-shadow: 0 0 20px rgba(255,215,0,0.4);
 }
-
-/* IMAGE FIX (MOST IMPORTANT PART) */
-.menu-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;     /* keeps image perfect */
-    border-radius: 12px;
-    border: 2px solid #4a341e;
-    margin-bottom: 10px;
-}
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 40px;
-}
-
+/* ===== ROYAL MENU CARD ===== */
 .menu-card {
-    background: radial-gradient(#f7e7b7, #c2a45e);
-    border-radius: 16px;
-    padding: 15px;
-    text-align: center;
-    border: 3px solid #6b4a2b;
-    box-shadow: 0 0 25px rgba(255,215,0,0.4);
-}
-
-.menu-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid #4a341e;
-    margin-bottom: 10px;
+    background: linear-gradient(135deg, #1a1333, #000);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .menu-card:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 30px 50px rgba(255, 215, 0, 0.4);
 }
 
+/* ===== IMAGE ===== */
 .menu-card img {
-    filter: brightness(0.95) contrast(1.1);
-}
-/* Body Wizard Theme */
-.wizard-bg {
-    background: url("images/hogwarts.jpg") center/cover fixed;
-    font-family: 'Crimson Text', serif;
-    color: #f5e6b8;
-}
-
-/* Navbar */
-.wizard-nav {
-    background: rgba(20,20,30,0.9);
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-bottom: 2px solid gold;
 }
 
-.logo {
-    font-family: 'Cinzel', serif;
+/* ===== CONTENT ===== */
+.menu-card h3 {
     color: gold;
+    font-size: 1.4rem;
+    margin: 15px 0 5px;
 }
 
-/* Section Title */
-.magical-offers h2 {
+.menu-card p {
+    color: #ddd;
+    font-size: 0.95rem;
+}
+
+.menu-card span {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #ffd700;
+    font-weight: 600;
+}
+@media (max-width: 900px) {
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== ORDER BUTTON ===== */
+.order-btn {
+    display: inline-block;
+    margin: 15px 0 25px;
+    padding: 10px 28px;
+    border-radius: 30px;
+    background: gold;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #d4af37;
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    padding: 20px;
     text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: gold;
-    text-shadow: 0 0 15px #ffd700;
-    margin-bottom: 50px;
+    color: #aaa;
+    border-top: 1px solid gold;
+}
+/* ===== OFFERS SECTION ===== */
+.offers {
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #0d0b14, #000);
 }
 
-/* Offer Container */
+.offers h2 {
+    font-size: 2.8rem;
+    color: gold;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+
+/* ===== OFFER GRID ===== */
 .offer-container {
+    max-width: 1100px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
 }
 
-/* Offer Cards (Parchment Style) */
+/* ===== ROYAL OFFER CARD ===== */
 .offer-card {
-    background: radial-gradient(#f3e5ab, #c2a45e);
-    color: #3b2b1a;
-    border: 3px solid #7a5c2e;
-    border-radius: 16px;
-    padding: 25px 15px;
+    background: linear-gradient(135deg, #1a1333, #000);
+    border-radius: 22px;
+    padding: 40px 25px;
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.8)
+    ),
+    url(images/royal.png) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    box-shadow: 0 0 25px rgba(255,215,0,0.3);
-    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Gold border glow */
+.offer-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 22px;
 }
 
 .offer-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 45px rgba(255,215,0,0.7);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 30px 55px rgba(255, 215, 0, 0.45);
 }
 
-/* Spell Button */
-.spell-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    background: linear-gradient(45deg, #7f0909, #d4af37);
-    color: #fff;
-    box-shadow: 0 0 10px gold;
-    transition: 0.3s;
-}
-
-.spell-btn:hover {
-    background: linear-gradient(45deg, #1a472a, #d4af37);
-    box-shadow: 0 0 25px lime;
-}
-
-/* Footer */
-.wizard-footer {
-    background: rgba(0,0,0,0.85);
+/* ===== CONTENT ===== */
+.offer-card h3 {
+    font-size: 1.6rem;
     color: gold;
-    text-align: center;
-    padding: 20px;
+    margin-bottom: 15px;
 }
 
-/* Floating Candles above offers (optional) */
-.candles span {
-    position: fixed;
-    top: 100%;
-    width: 6px;
-    height: 30px;
-    background: #f5f5f5;
-    left: calc(10% * var(--i));
-    animation: floatCandle 12s linear infinite;
-    border-radius: 2px;
-}
-
-.candles span::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -4px;
-    width: 14px;
-    height: 14px;
-    background: gold;
-    border-radius: 50%;
-    box-shadow: 0 0 20px gold;
-}
-
-.candles span:nth-child(1){ --i:1 }
-.candles span:nth-child(2){ --i:3 }
-.candles span:nth-child(3){ --i:5 }
-
-@keyframes floatCandle {
-    0% { transform: translateY(0); opacity:0; }
-    20% { opacity:1; }
-    100% { transform: translateY(-120vh); opacity:0; }
-}
-/* Body Wizard Theme */
-.wizard-bg {
-    background: url("images/hogwarts.jpg") center/cover fixed;
-    font-family: 'Crimson Text', serif;
-    color: #f5e6b8;
-}
-
-/* Navbar */
-.wizard-nav {
-    background: rgba(20,20,30,0.9);
-    border-bottom: 2px solid gold;
-}
-
-.logo {
-    font-family: 'Cinzel', serif;
-    color: gold;
-}
-
-/* Gallery Section Title */
-.magical-gallery h2 {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: gold;
-    text-shadow: 0 0 15px #ffd700;
-    margin-bottom: 50px;
-}
-
-/* Gallery Grid */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 40px;
-}
-
-/* Gallery Cards (Parchment + Magical Hover) */
-.spell-card {
-    background: radial-gradient(#f3e5ab, #c2a45e);
-    border-radius: 16px;
-    padding: 10px;
-    border: 3px solid #7a5c2e;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(255,215,0,0.4);
-    transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.spell-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid #4a341e;
-    transition: transform 0.5s, box-shadow 0.5s;
-}
-
-/* Magical Hover Effect */
-.spell-card:hover img {
-    transform: scale(1.1) rotate(1deg);
-    box-shadow: 0 0 35px rgba(255,215,0,0.7);
-}
-
-/* Footer */
-.wizard-footer {
-    background: rgba(0,0,0,0.85);
-    color: gold;
-    text-align: center;
-    padding: 20px;
-}
-/* Wizard Background */
-.wizard-bg {
-    background: url("images/hogwarts.jpg") center/cover fixed;
-    font-family: 'Crimson Text', serif;
-    color: #f5e6b8;
-}
-
-/* Navbar */
-.wizard-nav {
-    background: rgba(20,20,30,0.9);
-    border-bottom: 2px solid gold;
-}
-
-.logo {
-    font-family: 'Cinzel', serif;
-    color: gold;
-}
-
-/* Section Title */
-.magical-contact h2 {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: gold;
-    text-shadow: 0 0 15px #ffd700;
-    margin-bottom: 40px;
-}
-
-/* Form Styles */
-.magical-contact form {
-    max-width: 500px;
-    margin: 0 auto 60px auto;
-    background: radial-gradient(#f3e5ab, #c2a45e);
-    padding: 30px 25px;
-    border-radius: 16px;
-    border: 3px solid #7a5c2e;
-    box-shadow: 0 0 25px rgba(255,215,0,0.4);
-}
-
-.magical-contact input,
-.magical-contact textarea {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 2px solid #4a341e;
-    background: rgba(255,255,255,0.9);
-    font-family: 'Crimson Text', serif;
+.offer-card p {
+    color: #ddd;
     font-size: 1rem;
-    color: #3b2b1a;
-    transition: 0.3s;
+    margin-bottom: 25px;
 }
 
-.magical-contact input:focus,
-.magical-contact textarea:focus {
-    border-color: gold;
-    box-shadow: 0 0 15px gold;
-    outline: none;
+/* ===== ORDER BUTTON (reuse existing) ===== */
+.offer-card .order-btn {
+    padding: 12px 32px;
 }
 
-.magical-contact textarea {
-    height: 120px;
-    resize: none;
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    border-top: 1px solid gold;
+    padding: 20px;
+    color: #aaa;
+    text-align: center;
+}
+/* ===== GALLERY SECTION ===== */
+.gallery {
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #0d0b14, #000);
+    text-align: center;
 }
 
-/* Magical Button */
-.spell-btn {
-    display: inline-block;
-    padding: 12px 28px;
+.gallery h2 {
+    font-size: 2.8rem;
+    color: gold;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.8)
+    ),
+    url(images/royal.png) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 30px;
+}
+
+
+/* ===== ROYAL IMAGE CARD ===== */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Gold frame */
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    border-radius: 20px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 30px 55px rgba(255, 215, 0, 0.45);
+}
+
+/* ===== IMAGE ===== */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Zoom on hover */
+.gallery-item:hover img {
+    transform: scale(1.15);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    border-top: 1px solid gold;
+    padding: 20px;
+    color: #aaa;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== CONTACT SECTION ===== */
+.contact {
+    min-height: 80vh;
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #0d0b14, #000);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.8rem;
+    color: gold;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.8)
+    ),
+    url(images/royal.png) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ===== FORM ===== */
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    background: linear-gradient(135deg, #1a1333, #000);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 25px 45px rgba(255, 215, 0, 0.25);
+}
+
+/* ===== INPUTS ===== */
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 14px 18px;
     border-radius: 30px;
     border: none;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    background: linear-gradient(45deg, #7f0909, #d4af37);
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
     color: #fff;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* ===== PLACEHOLDER ===== */
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #bbb;
+}
+
+/* ===== BUTTON ===== */
+.contact button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    background: gold;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
     cursor: pointer;
-    box-shadow: 0 0 15px gold;
     transition: 0.3s;
 }
 
-.spell-btn:hover {
-    background: linear-gradient(45deg, #1a472a, #d4af37);
-    box-shadow: 0 0 25px lime;
+.contact button:hover {
+    background: #d4af37;
     transform: scale(1.05);
 }
 
-/* Footer */
-.wizard-footer {
-    background: rgba(0,0,0,0.85);
-    color: gold;
-    text-align: center;
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    border-top: 1px solid gold;
     padding: 20px;
-}
-/* Wizard Background */
-.wizard-bg {
-    background: url("images/hogwarts.jpg") center/cover fixed;
-    font-family: 'Crimson Text', serif;
-    color: #f5e6b8;
-}
-
-/* Navbar */
-.wizard-nav {
-    background: rgba(20,20,30,0.9);
-    border-bottom: 2px solid gold;
-}
-
-.logo {
-    font-family: 'Cinzel', serif;
-    color: gold;
-}
-
-/* About Section Title */
-.magical-about h2 {
     text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: gold;
-    text-shadow: 0 0 15px #64696b;
-    margin-bottom: 30px;
+    color: #aaa;
+}
+/* ===== CONTACT INFO CARDS ===== */
+.contact-cards {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-/* About Section Parchment Style */
-.magical-about {
-    max-width: 800px;
-    margin: 50px auto;
-    background: radial-gradient(#f3e5ab, #94918a);
-    padding: 35px 30px;
+.contact-card {
+    background: linear-gradient(135deg, #1a1333, #000);
+    padding: 30px;
     border-radius: 20px;
-    border: 3px solid #7a5c2e;
-    box-shadow: 0 0 30px rgba(255,215,0,0.4);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    text-align: justify;
-}
-
-/* Paragraph Magical Glow */
-.magical-about p {
-    margin-bottom: 20px;
-    text-shadow: 0 0 4px #ffd700;
-}
-
-/* Footer */
-.wizard-footer {
-    background: rgba(0,0,0,0.85);
-    color: gold;
     text-align: center;
-    padding: 20px;
-}
-/* Paragraph Magical Glow - Dim Version */
-.magical-about p {
-    margin-bottom: 20px;
-    text-shadow: 0 0 3px #ffd700; /* smaller blur for dimmer glow */
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.25);
+    transition: transform 0.4s, box-shadow 0.4s;
 }
 
-/* Title Dim Glow */
-.magical-about h2 {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: gold;
-    text-shadow: 0 0 8px #ffd700; /* smaller and dimmer glow */
-    margin-bottom: 30px;
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 55px rgba(255, 215, 0, 0.45);
 }
+
+.contact-card h3 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== MAP ===== */
+.map-container {
+    max-width: 1100px;
+    margin: 70px auto 0;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 25px 45px rgba(255, 215, 0, 0.25);
+    border: 2px solid gold;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+}
+
 

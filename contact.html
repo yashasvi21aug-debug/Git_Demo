@@ -2,38 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RaViKa | Magical Contact</title>
+    <title>Bombay Bistro  | Contact</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
-<body class="wizard-bg">
+<body>
 
 <header>
-    <div class="navbar wizard-nav">
-        <h1 class="logo">🪄 RaViKa</h1>
+    <div class="navbar">
+        <h1 class="logo">🍴 Bombay Bistro</h1>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="offers.html">Offers</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 </header>
 
-<section class="contact magical-contact">
-    <h2>✨ Send Us a Magical Message ✨</h2>
+<section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-cards">
+
+    <div class="contact-card">
+        <h3>📞 Phone</h3>
+        <p>+91 98765 43210</p>
+    </div>
+
+    <div class="contact-card">
+        <h3>📧 Email</h3>
+        <p>contact@ravika.com</p>
+    </div>
+
+    <div class="contact-card">
+        <h3>📍 Address</h3>
+        <p>Main Street, City Center, India</p>
+    </div>
+
+</div>
+
     <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message"></textarea>
-        <button type="submit" class="spell-btn">Cast Message</button>
+        <button type="submit">Send</button>
     </form>
+    <div class="map-container">
+    <iframe
+        src="https://www.google.com/maps?q=India&output=embed"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</div>
+
 </section>
 
-<footer class="wizard-footer">
-    <p>© 2025 RaViKa | Hogwarts Feast 🍺</p>
+<footer>
+    <p>© 2025 Bombay Bistro Restaurant</p>
 </footer>
 
 </body>
