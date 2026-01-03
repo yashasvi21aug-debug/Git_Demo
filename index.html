@@ -2,91 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>RaViKa | Home</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<!-- Navbar -->
-<header>
-    <nav class="navbar">
-        <h2 class="logo">MyPortfolio</h2>
+
+<body>
+    <div class="candles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<header class="header">
+    <div class="theme-switch">
+    <input type="checkbox" id="house">
+    <label for="house">🐍 Slytherin Mode</label>
+</div>
+
+    <div class="navbar">
+        <h1 class="logo">🍴 RaViKa </h1>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+    </div>
 </header>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
+<section class="hero">
     <div class="hero-content">
-        <img src="images/profile.png" class="hero-img">
-        <h1>Hi, I'm <span>Yashasvi Singh</span></h1>
-        <p>Web Developer | Designer | Student</p>
-        <a href="#contact" class="btn">Hire Me</a>
+        <h2>Delicious Food Made With Love</h2>
+        <p>Fresh ingredients • Affordable prices • Great taste</p>
+        <div class="hero-buttons">
+            <a href="menu.html" class="btn primary">View Menu</a>
+            <a href="contact.html" class="btn secondary">Order Now</a>
+        </div>
+    </div>
+    
+</div>
+
+</section>
+<div class="sorting-hat">
+    <img src="images/sorting-hat.png" alt="Sorting Hat">
+    <p class="hat-text">Hmm… difficult. Very difficult…</p>
+</div>
+
+
+<section class="features">
+    <div class="feature-card">
+        <h3>🍔 Fresh Food</h3>
+        <p>Prepared daily using quality ingredients.</p>
+    </div>
+    <div class="feature-card">
+        <h3>🚚 Fast Delivery</h3>
+        <p>Quick service right to your doorstep.</p>
+    </div>
+    <div class="feature-card">
+        <h3>⭐ Best Quality</h3>
+        <p>Trusted by hundreds of happy customers.</p>
     </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        I am a passionate web developer learning HTML and CSS.
-        I love creating responsive and creative websites.
-    </p>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills">
-    <h2>My Skills</h2>
-    <div class="skill-box">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">Responsive Design</div>
-        <div class="skill">Flexbox</div>
-        <div class="skill">CSS Grid</div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-container">
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Responsive personal portfolio using HTML & CSS.</p>
-        </div>
-        <div class="project-card">
-            <h3>Product Grid</h3>
-            <p>Responsive product grid layout.</p>
-        </div>
-        <div class="project-card">
-            <h3>Landing Page</h3>
-            <p>Modern landing page design.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
-</section>
-
-<!-- Footer -->
 <footer>
-    <p>© 2025 MyPortfolio | All Rights Reserved</p>
+    <p>© 2025 RaViKa Restaurant | All Rights Reserved</p>
 </footer>
 
+
+
 </body>
+
+
 </html>
+
+
+
